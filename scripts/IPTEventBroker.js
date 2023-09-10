@@ -18,7 +18,9 @@ iptContract.events.TransactionEvent({
     }
     // Extract event parameters
     const { from, to, value, data } = event.returnValues;
-    // Call StartupEd middleware API
+    
+    // Call StartupEd middleware API ---------- *** IMPORTANT *** ----------
+    
     callStartupEdAPI(from, to, value, data);
 })
 .on('error', console.error);
